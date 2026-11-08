@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #061b2c;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 55px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4bc9ff;
+}
+
+.get-started {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.12);
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.get-started span {
+    font-size: 26px;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.hero {
+    min-height: 680px;
+    height: 100vh;
+    max-height: 850px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 100px 8%;
+    background:
+        radial-gradient(ellipse at 70% 50%, #174a68 0%, transparent 50%),
+        linear-gradient(110deg, #03182a, #082e48 55%, #031729);
+}
+
+.background-glow {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(80,180,220,0.13), transparent 20%),
+        radial-gradient(circle at 75% 20%, rgba(255,255,255,0.09), transparent 15%),
+        radial-gradient(circle at 45% 70%, rgba(45,155,200,0.12), transparent 25%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    width: 48%;
+    margin-top: 40px;
+}
+
+.small-title {
+    color: #8bdcff;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 6vw, 85px);
+    line-height: 0.95;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -3px;
+}
+
+.hero-content h1 span {
+    display: block;
+    font-size: 1.15em;
+}
+
+.description {
+    margin-top: 25px;
+    max-width: 390px;
+    color: #b7cbd8;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.explore-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 85px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(0, 13, 28, 0.7);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.explore-btn span {
+    font-size: 30px;
+}
+
+.explore-btn:hover {
+    background: #087eac;
+    transform: translateY(-4px);
+}
+
+.water-bottle {
+    position: absolute;
+    width: 210px;
+    height: 440px;
+    top: 21%;
+    left: 62%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(15px 20px 25px rgba(0,0,0,0.4));
+}
+
+.cap {
+    width: 54px;
+    height: 25px;
+    background: repeating-linear-gradient(
+        90deg,
+        #153c5c 0px,
+        #153c5c 4px,
+        #46718b 5px,
+        #153c5c 7px
+    );
+    border-radius: 5px 5px 2px 2px;
+    border: 2px solid #456b85;
+    z-index: 2;
+}
+
+.bottle {
+    position: relative;
+    width: 150px;
+    height: 400px;
+    margin-top: -2px;
+    border-radius: 30px 30px 35px 35px;
+    background: linear-gradient(
+        90deg,
+        rgba(130,190,220,0.3),
+        rgba(255,255,255,0.65) 25%,
+        rgba(110,175,210,0.3) 65%,
+        rgba(255,255,255,0.45)
+    );
+    border: 2px solid rgba(220,245,255,0.5);
+    box-shadow:
+        inset 8px 0 15px rgba(255,255,255,0.3),
+        inset -8px 0 15px rgba(0,30,70,0.2);
+    overflow: visible;
+}
+
+.bottle-neck {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    top: -30px;
+    left: 33px;
+    border-radius: 8px 8px 0 0;
+    background: rgba(170,220,240,0.35);
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+.bottle-label {
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    height: 85px;
+    background: linear-gradient(90deg, #06375d, #0876a7, #06375d);
+    color: white;
+    text-align: center;
+    padding: 17px 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.bottle-label h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.bottle-label p {
+    font-size: 8px;
+    margin-top: 4px;
+}
+
+.bottle-label small {
+    font-size: 5px;
+    letter-spacing: 1px;
+}
+
+.bottle-water {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(
+        180deg,
+        rgba(100,200,255,0.08),
+        rgba(60,170,230,0.3)
+    );
+    border-radius: 0 0 30px 30px;
+}
+
+.splash {
+    position: absolute;
+    z-index: 3;
+    border: 13px solid rgba(180,235,255,0.5);
+    filter: blur(2px);
+    box-shadow:
+        0 0 15px rgba(180,235,255,0.3),
+        inset 0 0 20px rgba(255,255,255,0.3);
+}
+
+.splash-one {
+    width: 370px;
+    height: 85px;
+    left: 46%;
+    top: 62%;
+    border-radius: 50%;
+    transform: rotate(-9deg);
+}
+
+.splash-two {
+    width: 120px;
+    height: 180px;
+    left: 69%;
+    top: 48%;
+    border-radius: 80% 10% 80% 10%;
+    transform: rotate(35deg);
+    border-width: 8px;
+}
+
+.splash-three {
+    width: 250px;
+    height: 65px;
+    left: 53%;
+    top: 68%;
+    border-radius: 50%;
+    transform: rotate(12deg);
+    border-width: 7px;
+}
+
+.water-floor {
+    position: absolute;
+    height: 85px;
+    width: 120%;
+    left: -10%;
+    bottom: -15px;
+    z-index: 2;
+    border-radius: 50% 50% 0 0;
+    background: linear-gradient(
+        180deg,
+        rgba(160,225,250,0.5),
+        rgba(30,100,140,0.7)
+    );
+    box-shadow: 0 -10px 25px rgba(180,230,255,0.15);
+}
+
+.water-floor::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    top: -10px;
+    background: rgba(210,245,255,0.4);
+    border-radius: 50%;
+    filter: blur(8px);
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.7),
+        rgba(80,180,220,0.15),
+        rgba(255,255,255,0.4)
+    );
+    border: 2px solid rgba(220,245,255,0.4);
+    box-shadow: inset 4px 3px 7px rgba(255,255,255,0.4);
+}
+
+.bubble-one {
+    width: 90px;
+    height: 45px;
+    left: 40%;
+    top: -10px;
+}
+
+.bubble-two {
+    width: 45px;
+    height: 25px;
+    left: 65%;
+    top: 20px;
+}
+
+.bubble-three {
+    width: 55px;
+    height: 35px;
+    left: 80%;
+    top: 5px;
+}
+
+.bubble-four {
+    width: 30px;
+    height: 20px;
+    left: 25%;
+    top: 15px;
+}
+
+.bubble-five {
+    width: 60px;
+    height: 35px;
+    left: 72%;
+    top: -5px;
+}
+
+.water-drops span {
+    position: absolute;
+    z-index: 3;
+    color: rgba(200,240,255,0.6);
+    font-size: 45px;
+}
+
+.water-drops span:nth-child(1) {
+    left: 46%;
+    top: 45%;
+}
+
+.water-drops span:nth-child(2) {
+    left: 75%;
+    top: 38%;
+}
+
+.water-drops span:nth-child(3) {
+    left: 57%;
+    top: 28%;
+}
+
+.water-drops span:nth-child(4) {
+    left: 85%;
+    top: 55%;
+
+}
+
+.about,
+.services {
+    padding: 100px 10%;
+    text-align: center;
+    background: #08263c;
+}
+
+.about h2,
+.services h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about p,
+.services p {
+    color: #abc7d8;
+    font-size: 14px;
+}
+
+.services {
+    background: #061b2c;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #031522;
+    color: #8ba6
